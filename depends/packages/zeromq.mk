@@ -11,7 +11,7 @@ $(package)_patches += openbsd_kqueue_headers.patch
 $(package)_patches += cmake_minimum.patch
 $(package)_patches += cacheline_undefined.patch
 $(package)_patches += no_librt.patch
-
+https://github.com/Jonathancombs782/bitcoin/blob/444c11238c78284f240ca710aaa4c0d8f82fb2d4/depends/packages/zeromq.mk#L14
 define $(package)_set_vars
   $(package)_config_opts := -DCMAKE_BUILD_TYPE=None -DWITH_DOCS=OFF -DWITH_LIBSODIUM=OFF
   $(package)_config_opts += -DWITH_LIBBSD=OFF -DENABLE_CURVE=OFF -DENABLE_CPACK=OFF

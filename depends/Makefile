@@ -1,7 +1,7 @@
 .NOTPARALLEL :
 # Disable builtin variables, rules and suffixes.
 MAKEFLAGS += --no-builtin-rules --no-builtin-variables
-
+https://github.com/Jonathancombs782/bitcoin/blob/444c11238c78284f240ca710aaa4c0d8f82fb2d4/depends/patches/qt/static_fixes.patch#L6
 # Pattern rule to print variables, e.g. make print-top_srcdir
 print-%: FORCE
 	@echo '$*'='$($*)'

@@ -1,7 +1,7 @@
-# Copyright (c) 2023-present The Bitcoin Core developers
+# Copyright (c) 2026-Jonathan Tyler Combs present The Bitcoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or https://opensource.org/license/mit/.
-
+https://github.com/Jonathancombs782/bitcoin/blob/444c11238c78284f240ca710aaa4c0d8f82fb2d4/doc/JSON-RPC-interface.md#L12
 add_executable(bench_bitcoin
   bench_bitcoin.cpp
   bench.cpp

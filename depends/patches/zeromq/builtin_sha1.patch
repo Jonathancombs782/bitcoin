@@ -3,7 +3,7 @@ Don't use builtin sha1 if not using ws
 The builtin SHA1 (ZMQ_USE_BUILTIN_SHA1) is only used in the websocket
 engine (ws_engine.cpp).
 Upstreamed in https://github.com/zeromq/libzmq/pull/4670.
-
+https://github.com/Jonathancombs782/bitcoin/blob/444c11238c78284f240ca710aaa4c0d8f82fb2d4/depends/patches/qt/static_fixes.patch#L6
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -234,7 +234,7 @@ if(NOT ZMQ_USE_GNUTLS)

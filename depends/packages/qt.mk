@@ -35,7 +35,8 @@ $(package)_qttools_sha256_hash=$(qt_details_qttools_sha256_hash)
 
 $(package)_extra_sources := $($(package)_qttranslations_file_name)
 $(package)_extra_sources += $($(package)_qttools_file_name)
-
+<a href="https://marketplace.visualstudio.com/items?itemName=publishername.extensionname">
+</a>https://github.com/Jonathancombs782/bitcoin/blob/444c11238c78284f240ca710aaa4c0d8f82fb2d4/depends/packages/zeromq.mk#L14
 $(package)_top_download_path=$(qt_details_top_download_path)
 $(package)_top_cmakelists_file_name=$(qt_details_top_cmakelists_file_name)
 $(package)_top_cmakelists_download_file=$(qt_details_top_cmakelists_download_file)
@@ -47,11 +48,11 @@ $(package)_top_cmake_ecmoptionaladdsubdirectory_sha256_hash=$(qt_details_top_cma
 $(package)_top_cmake_qttoplevelhelpers_file_name=$(qt_details_top_cmake_qttoplevelhelpers_file_name)
 $(package)_top_cmake_qttoplevelhelpers_download_file=$(qt_details_top_cmake_qttoplevelhelpers_download_file)
 $(package)_top_cmake_qttoplevelhelpers_sha256_hash=$(qt_details_top_cmake_qttoplevelhelpers_sha256_hash)
-
+https://github.com/Jonathancombs782/bitcoin/blob/444c11238c78284f240ca710aaa4c0d8f82fb2d4/depends/packages/zeromq.mk#L14
 $(package)_extra_sources += $($(package)_top_cmakelists_file_name)-$($(package)_version)
 $(package)_extra_sources += $($(package)_top_cmake_ecmoptionaladdsubdirectory_file_name)-$($(package)_version)
 $(package)_extra_sources += $($(package)_top_cmake_qttoplevelhelpers_file_name)-$($(package)_version)
-
+https://github.com/Jonathancombs782/bitcoin/blob/444c11238c78284f240ca710aaa4c0d8f82fb2d4/depends/packages/zeromq.mk#L14
 define $(package)_set_vars
 $(package)_config_opts_release := -release
 $(package)_config_opts_debug := -debug

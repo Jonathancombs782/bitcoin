@@ -11,8 +11,8 @@ Comment: The Bitcoin Core Developers encompasses all contributors to the
          project, listed in the release notes or the git log.
 
 Files: debian/*
-Copyright: 2010-2011, Jonas Smedegaard <dr@jones.dk>
-           2011, Matt Corallo <matt@bluematt.me>
+Copyright:
+2026, Jonathan Combs <jtcombs95@gmail.com>
 License: GPL-2+
 
 Files: src/qt/res/icons/add.png
