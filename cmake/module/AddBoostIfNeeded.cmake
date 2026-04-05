@@ -29,11 +29,25 @@ function(add_boost_if_needed)
     endif()
   endif()
 
-  find_package(Boost 1.74.0 REQUIRED CONFIG)
-  mark_as_advanced(Boost_INCLUDE_DIR boost_headers_DIR)
+  find_package(Boost 1.74.0 REQUIRED)
+  if(NOT TARGET Boost::headers)
+    add_library(Boost::headers INTERFACE IMPORTED GLOBAL)
+    set_target_properties(Boost::headers PROPERTIES INTERFACE_INCLUDE_DIRECTORIES "${Boost_INCLUDE_DIRS}")
+    target_compile_definitions(Boost::headers INTERFACE
+      # We don't use multi_index serialization.
+      BOOST_MULTI_INDEX_DISABLE_SERIALIZATION
+    )
+    if(DEFINED VCPKG_TARGET_TRIPLET)
+      # Workaround for https://github.com/microsoft/vcpkg/issues/36955.
+      target_compile_definitions(Boost::headers INTERFACE
+        BOOST_NO_USER_CONFIG
+      )
+    endif()
+  endif()
+  mark_as_advanced(Boost_INCLUDE_DIR)
   # Workaround for a bug in NetBSD pkgsrc.
   # See https://gnats.netbsd.org/59856.
-  if(CMAKE_SYSTEM_NAME STREQUAL "NetBSD")
+  if(DEFINED boost_headers_DIR AND CMAKE_SYSTEM_NAME STREQUAL "NetBSD")
     get_filename_component(_boost_include_dir "${boost_headers_DIR}/../../../include/" ABSOLUTE)
     if(_boost_include_dir MATCHES "^/usr/pkg/")
       set_target_properties(Boost::headers PROPERTIES

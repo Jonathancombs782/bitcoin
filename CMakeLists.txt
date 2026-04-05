@@ -214,7 +214,6 @@ target_link_libraries(core_interface INTERFACE
 )
 
 if(BUILD_FOR_FUZZING)
-  message(WARNING "BUILD_FOR_FUZZING=ON will disable all other targets and force BUILD_FUZZ_BINARY=ON.")
   set(BUILD_BITCOIN_BIN OFF)
   set(BUILD_DAEMON OFF)
   set(BUILD_CLI OFF)
