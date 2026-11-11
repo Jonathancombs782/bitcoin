@@ -9,6 +9,4 @@ mise use --global ruby@3ruby --version
 
 node -v
 #=> 24.11.0git config --global color.ui true
-git config --global user.name "Jonathan Tyler Combs"
-git config --global user.email "jt_combs95@icloud.com"
-ssh-keygen -t ed25519 -C "jt_combs95@icloud.com"
+# git identity (user.name / user.email) intentionally omitted — configure your own
